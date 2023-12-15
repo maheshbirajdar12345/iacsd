@@ -5,6 +5,10 @@ docker run -d -p 8081:80 --name demo_container maheshiacsd/demo
 docker push maheshiacsd/demo
 
 
+#Docker swarm 
+docker login -u maheshiacsd -p Iacsd@123
+docker build -t maheshiacsd/demo .
+ docker service create --replicas 3 --name container -d -p 80:80 maheshiacsd/it
 
 
 sudo usermod -aG docker jenkins
