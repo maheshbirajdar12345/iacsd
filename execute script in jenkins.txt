@@ -1,0 +1,10 @@
+docker container stop $(docker container ls -aq && docker system purne -af --volumes
+docker login -u maheshiacsd -p Iacsd@123
+docker build -t maheshiacsd/demo .
+docker run -d -p 8081:80 --name demo_container maheshiacsd/demo
+docker push maheshiacsd/demo
+
+
+
+
+sudo usermod -aG docker jenkins
